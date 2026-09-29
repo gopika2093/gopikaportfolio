@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#163e46"><meta name="description" content="Wander through Gopika's university world and choose which parts of her work to explore.">
+<title>Gopika · A campus to explore</title>
+<link rel="stylesheet" href="campus.css">
+<script type="module" src="campus.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#" aria-label="Gopika's campus">Gopika<span>A campus to explore</span></a><div class="header-actions"><button id="places-button" aria-expanded="false" aria-controls="places">Places to visit <span aria-hidden="true">⌄</span></button><button id="end-walk">End the walk</button><a href="https://gopika2093.github.io/gopikaportfolio/" target="_blank" rel="noreferrer">Read my portfolio ↗</a></div></header>
+<main id="game-shell">
+  <canvas id="campus" tabindex="0" aria-label="Explore Gopika's professional journey. University campus at street level. Use Map view for an overview. Click and drag to guide Gopika. Release to stop. Click a path to walk to it. Use arrow keys or W A S D to move, E to enter a nearby place. Stories open only when you choose to enter."></canvas>
+  <dialog class="welcome" id="welcome" aria-labelledby="welcome-title" aria-describedby="welcome-copy">
+    <h1 id="welcome-title">Hi, I’m Gopika.</h1>
+    <p id="welcome-copy">Welcome to my campus walk. Would you like to explore the places and experiences that have shaped my work?</p>
+    <div class="welcome-choices" id="welcome-choices"><button id="whats-here" autofocus>What’s here?</button><button id="begin-walk" class="begin-walk">Let’s explore</button><button id="explore-alone">I’ll look around myself</button></div>
+    <div id="welcome-overview" hidden><p>This walk shares some of the work I’ve done at Charles Darwin University. We can visit the student hub, where I supported elected committees; the Carnival, where we brought students together; or the research centre, where I helped people and ideas connect. We could also stop at the café and talk about how I approach my work. Where would you like to start?</p><div id="welcome-destinations" class="dialogue-choices"></div></div>
+    <button id="dismiss-welcome" class="dismiss-welcome" aria-label="Close welcome and explore the campus">×</button>
+  </dialog>
+  <div id="world-labels" aria-label="Campus destinations"></div>
+  <aside id="places" class="places" hidden aria-label="Places to visit"><p class="eyebrow">Where would you like to go?</p><p>Choose a place to walk towards. Step inside when you’re ready.</p><div id="place-buttons"></div><a class="roadmap-link" href="roadmap/">View the earlier roadmap ↗</a></aside>
+  <div class="view-controls" aria-label="Camera controls"><button id="view-mode" aria-label="Switch to map view">Map view</button><button id="turn-left" aria-label="Turn the view left">↶</button><button id="turn-right" aria-label="Turn the view right">↷</button><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="home-view" aria-label="Return to the campus entrance">⌂</button></div>
+  <div class="nearby" id="nearby" hidden><div><span class="eyebrow">You’re nearby</span><strong id="nearby-title">Research centre</strong></div><button id="enter-place">Step inside <kbd>E</kbd></button></div>
+  <div class="game-help"><span class="desktop-help">Hold & drag to guide me · click a path to walk · <kbd>W A S D</kbd> / arrows</span><span class="mobile-help">Drag to guide me. Tap a path to walk.</span></div>
+  <div class="touch-controls" aria-label="Movement controls"><div class="dpad"><button data-move="up" aria-label="Walk forward">↑</button><button data-move="left" aria-label="Walk left">←</button><button data-move="down" aria-label="Walk backward">↓</button><button data-move="right" aria-label="Walk right">→</button></div></div>
+  <div class="load-state" id="load-state"><span class="loading-ring" aria-hidden="true"></span><p>Opening the campus…</p></div>
+  <p class="sr-only" id="announcement" aria-live="polite"></p>
+</main>
+<dialog id="room" class="room"><div class="room-header"><span id="room-period" class="eyebrow"></span><div class="room-actions"><button id="end-walk-room">End the walk</button><button id="close-room" aria-label="Return to the campus">Back to campus ×</button></div></div><figure id="room-timeline" class="room-timeline" hidden><img id="room-timeline-image" width="1584" height="396" alt="" decoding="async"></figure><div class="room-intro"><span id="room-tag"></span><h2 id="room-title"></h2><p id="room-intro"></p></div><section class="dialogue" aria-labelledby="dialogue-heading"><h3 id="dialogue-heading">A conversation with Gopika</h3><p id="dialogue-copy" aria-live="polite"></p><div id="dialogue-choices" class="dialogue-choices"></div></section><div class="room-tabs" id="room-tabs" role="tablist" aria-label="Explore work in this place"></div><article id="room-story" role="tabpanel" tabindex="0"><h3 id="room-story-title"></h3><p id="room-story-copy"></p><div id="research-journey" hidden></div><div id="room-story-links"></div></article><p class="room-footer">You can stay as long as you like, or head back out and keep wandering.</p></dialog>
+<noscript><div class="no-script">This campus uses JavaScript. <a href="https://gopika2093.github.io/gopikaportfolio/">Read Gopika’s portfolio instead.</a></div></noscript>
+</body>
+</html>

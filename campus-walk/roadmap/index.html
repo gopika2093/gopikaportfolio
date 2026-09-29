@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore Gopika's student group program through an interactive roadmap.">
+  <meta name="theme-color" content="#173346">
+  <title>Gopika · A student group journey</title>
+  <link rel="stylesheet" href="roadmap.css">
+  <script src="journey-data.js" defer></script>
+  <script src="roadmap.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#roadmap">Skip to the roadmap</a>
+  <header class="topbar">
+    <a class="name" href="#roadmap">Gopika Gopan Prema</a>
+    <nav aria-label="Preview sections"><a href="#roadmap">The journey</a><a href="#scale">The scale</a><a href="#improvement">What changed</a></nav>
+    <span class="preview-label">Portfolio preview</span>
+  </header>
+  <main>
+    <section class="journey" id="roadmap" aria-labelledby="journey-title">
+      <header class="intro">
+        <div><p class="eyebrow">Student leadership · 2024–2026</p><h1 id="journey-title">Every group starts somewhere.</h1></div>
+        <p>Follow a committee from its first application to the next handover. Pick a stop, or move the marker along the route.</p>
+      </header>
+      <div class="journey-layout">
+        <div class="board-column">
+          <div class="board" id="board">
+            <div class="board-caption"><span>A student group journey</span><span>Six stops. A continuing story.</span></div>
+            <div class="map" id="map">
+              <svg class="road" id="road" viewBox="0 0 1000 690" aria-hidden="true">
+                <path id="route-shadow" class="route-shadow"/>
+                <path id="route" class="route"/>
+                <path id="route-progress" class="route-progress"/>
+                <path id="route-dashes" class="route-dashes"/>
+              </svg>
+              <span class="start-label">Start here ↑</span>
+              <div class="stops" id="stops" role="group" aria-label="Choose a roadmap stop">
+                <button class="stop stop-1 selected" data-index="0" aria-pressed="true" aria-controls="story"><span class="stop-number">01</span><span class="stop-label"><b>Affiliation</b><small>A place to begin</small></span></button>
+                <button class="stop stop-2" data-index="1" aria-pressed="false" aria-controls="story"><span class="stop-number">02</span><span class="stop-label"><b>Onboarding</b><small>Find your feet</small></span></button>
+                <button class="stop stop-3" data-index="2" aria-pressed="false" aria-controls="story"><span class="stop-number">03</span><span class="stop-label"><b>Planning</b><small>Give the idea shape</small></span></button>
+                <button class="stop stop-4" data-index="3" aria-pressed="false" aria-controls="story"><span class="stop-number">04</span><span class="stop-label"><b>Funding</b><small>Make it possible</small></span></button>
+                <button class="stop stop-5" data-index="4" aria-pressed="false" aria-controls="story"><span class="stop-number">05</span><span class="stop-label"><b>Delivery</b><small>Bring it to life</small></span></button>
+                <button class="stop stop-6" data-index="5" aria-pressed="false" aria-controls="story"><span class="stop-number">06</span><span class="stop-label"><b>Transition</b><small>Pass it forward</small></span></button>
+              </div>
+              <div class="traveller" id="traveller" role="slider" tabindex="0" aria-label="Move the roadmap marker" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" aria-valuetext="Stop 1: Affiliation" aria-describedby="map-hint"><span aria-hidden="true"></span></div>
+            </div>
+            <div class="board-foot"><span id="map-hint">Tap a stop · Drag the ring · Use the arrow keys</span><span id="progress-label">Stop 1 of 6</span></div>
+          </div>
+          <div class="route-controls">
+            <button class="control" id="previous" aria-label="Previous stop" disabled>← Previous</button>
+            <button class="control play" id="play" aria-pressed="false"><span id="play-symbol" aria-hidden="true">▶</span> <span id="play-text">Follow the route</span></button>
+            <button class="control" id="next" aria-label="Next stop">Next →</button>
+          </div>
+          <div class="scrubber"><label for="route-slider">Choose your stop</label><input id="route-slider" type="range" min="0" max="5" step="1" value="0" aria-valuetext="Affiliation"></div>
+        </div>
+        <aside class="postcard" id="story" aria-label="Selected stop">
+          <div class="postcard-top"><span class="eyebrow" id="story-stop">Stop 01 / 06</span><span class="stamp" id="stamp" aria-hidden="true">01</span></div>
+          <p class="story-kicker" id="story-kicker">A place to begin</p>
+          <h2 id="story-title">Affiliation</h2>
+          <div class="perspectives" role="group" aria-label="Read this stop from another viewpoint">
+            <button class="perspective selected" data-lens="gopika" aria-pressed="true">My part</button>
+            <button class="perspective" data-lens="committee" aria-pressed="false">The committee</button>
+            <button class="perspective" data-lens="university" aria-pressed="false">The university</button>
+          </div>
+          <div class="story-body" id="story-body" aria-live="polite" aria-atomic="true">
+            <p id="story-copy">I understood what the group represented, reviewed its constitution and membership, and guided the committee through affiliation.</p>
+          </div>
+          <div class="takeaway"><span class="eyebrow">What connects this stage</span><p id="story-contribution">A shared beginning</p></div>
+          <div class="postcard-foot"><span>Observe · Understand · Connect · Improve</span></div>
+        </aside>
+      </div>
+      <p class="route-note">A simplified view of the program. Planning, funding and support often overlapped.</p>
+    </section>
+
+    <section class="scale-section" id="scale" aria-labelledby="scale-title">
+      <div class="small-intro"><p class="eyebrow">A sense of scale</p><h2 id="scale-title">Many groups. Many moving parts.</h2><p>Choose a figure to take a closer look.</p></div>
+      <div class="impact-grid" role="group" aria-label="Explore the scope of the work">
+        <button class="impact-card selected" aria-pressed="true" data-note="Each committee represented a different community, purpose and stage of development. The work involved understanding those differences while maintaining a consistent program."><span class="impact-mark">01</span><strong>25+</strong><span>committees supported</span></button>
+        <button class="impact-card" aria-pressed="false" data-note="The Student Carnival brought student groups and the wider university community into one shared experience. Attendance was approximately 600–700 people."><span class="impact-mark">02</span><strong>600–700</strong><span>Student Carnival attendees</span></button>
+        <button class="impact-card" aria-pressed="false" data-note="In 2024, student group funding included $33,000 in seed funding and $49,813.39 in activity funding. The work included guidance, approvals and reconciliation."><span class="impact-mark">03</span><strong>$82.8K</strong><span>funding administered in 2024</span></button>
+        <button class="impact-card" aria-pressed="false" data-note="A consistent identity connected the Opening, Dry Season and Red Carpet editions, while each event offered a different experience."><span class="impact-mark">04</span><strong>3</strong><span>Carnival editions</span></button>
+      </div>
+      <p class="impact-note" id="impact-note" aria-live="polite">Each committee represented a different community, purpose and stage of development. The work involved understanding those differences while maintaining a consistent program.</p>
+    </section>
+
+    <section class="improvement" id="improvement" aria-labelledby="improvement-title">
+      <div class="improvement-intro"><p class="eyebrow">Continuous improvement</p><h2 id="improvement-title">Give the next committee a clearer starting point.</h2><p>Move the slider to see how the guidance came together.</p></div>
+      <div class="change-workspace" id="change-workspace">
+        <div class="change-summary"><span class="eyebrow" id="change-label">The starting point</span><p id="change-story" aria-live="polite">Information and know-how could sit in different places, leaving new committees with recurring questions.</p><p class="change-caption">A visual illustration of the changes.</p></div>
+        <div class="tiles-area" id="tiles-area" aria-label="Program guidance coming together">
+          <div class="guide-tile" data-tile="0"><span>01</span><b>Affiliation</b><p>A clearer application process</p></div>
+          <div class="guide-tile" data-tile="1"><span>02</span><b>Shared guidance</b><p>Handbook and templates</p></div>
+          <div class="guide-tile" data-tile="2"><span>03</span><b>Training</b><p>Common starting points</p></div>
+          <div class="guide-tile" data-tile="3"><span>04</span><b>Continuity</b><p>Shared email, Teams and SharePoint</p></div>
+        </div>
+      </div>
+      <div class="change-controls"><button class="control" id="change-reset">Starting point</button><label class="sr-only" for="change-slider">Bring the guidance together</label><input type="range" id="change-slider" min="0" max="100" value="0" aria-valuetext="Guidance in separate places"><button class="control" id="change-bring">Bring it together →</button></div>
+    </section>
+  </main>
+  <footer><span>Gopika Gopan Prema</span><span>People · Purpose · Progress</span></footer>
+  <noscript><p class="no-script">Enable JavaScript to explore the route. The program moves through affiliation, onboarding, planning, funding, delivery and transition.</p></noscript>
+</body>
+</html>
